@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    container_name: trustarea-dev-db
+    build:
+        context: ./db/
+        dockerfile: Dockerfile
+    environment:
+      POSTGRES_DB: trustarea
+      POSTGRES_USER: trustarea
+      POSTGRES_PASSWORD: trustarea
+    ports:
+      - "7002:5432"
+
+  redis:
+    container_name: trustarea-dev-redis
+    image: redis
+    ports:
+      - "7003:6379"
+    entrypoint: redis-server --appendonly yes
+    restart: always

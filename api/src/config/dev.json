@@ -1,0 +1,18 @@
+{
+  "app": {
+    "host": "localhost",
+    "port": 8080
+  },
+  "db": {
+    "user": "trustarea",
+    "pass": "trustarea",
+    "host": "localhost",
+    "port": 7002,
+    "db_name": "trustarea"
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 7003,
+    "session_ttl": 0
+  }
+}
